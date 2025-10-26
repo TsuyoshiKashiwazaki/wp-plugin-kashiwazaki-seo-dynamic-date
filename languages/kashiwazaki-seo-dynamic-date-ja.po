@@ -1,0 +1,400 @@
+# Japanese translation for Kashiwazaki SEO Dynamic Date
+# Copyright (C) 2025 柏崎剛 (Tsuyoshi Kashiwazaki)
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kashiwazaki SEO Dynamic Date 1.0.0\n"
+"Report-Msgid-Bugs-To: https://www.tsuyoshikashiwazaki.jp\n"
+"POT-Creation-Date: 2025-10-24 16:00:00+00:00\n"
+"PO-Revision-Date: 2025-10-25 00:00:00+09:00\n"
+"Last-Translator: 柏崎剛 <t.kashiwazaki@contencial.co.jp>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kashiwazaki-seo-dynamic-date.php:160
+#: kashiwazaki-seo-dynamic-date.php:280
+msgid "Settings"
+msgstr "設定"
+
+#: kashiwazaki-seo-dynamic-date.php:171
+#: kashiwazaki-seo-dynamic-date.php:275
+msgid "Kashiwazaki SEO Dynamic Date"
+msgstr "Kashiwazaki SEO Dynamic Date"
+
+#: kashiwazaki-seo-dynamic-date.php:172
+msgid "KS Dynamic Date"
+msgstr "KS Dynamic Date"
+
+#: kashiwazaki-seo-dynamic-date.php:249
+msgid "Invalid format or offset"
+msgstr "無効なフォーマットまたはオフセットです"
+
+#: kashiwazaki-seo-dynamic-date.php:269
+msgid "Settings saved successfully!"
+msgstr "設定を保存しました!"
+
+#: kashiwazaki-seo-dynamic-date.php:283
+#: kashiwazaki-seo-dynamic-date.php:376
+msgid "Preview"
+msgstr "プレビュー"
+
+#: kashiwazaki-seo-dynamic-date.php:286
+#: kashiwazaki-seo-dynamic-date.php:410
+msgid "How to Use"
+msgstr "使い方"
+
+#: kashiwazaki-seo-dynamic-date.php:289
+msgid "Examples"
+msgstr "使用例"
+
+#: kashiwazaki-seo-dynamic-date.php:302
+msgid "General Settings"
+msgstr "一般設定"
+
+#: kashiwazaki-seo-dynamic-date.php:307
+msgid "Default Date Format"
+msgstr "デフォルトの日付形式"
+
+#: kashiwazaki-seo-dynamic-date.php:314
+msgid "The default format used when no format attribute is specified in the shortcode."
+msgstr "ショートコードでフォーマット属性が指定されていない場合に使用されるデフォルトの形式です。"
+
+#: kashiwazaki-seo-dynamic-date.php:316
+msgid "Current output:"
+msgstr "現在の出力:"
+
+#: kashiwazaki-seo-dynamic-date.php:311
+msgid "Save Settings"
+msgstr "設定を保存"
+
+#: kashiwazaki-seo-dynamic-date.php:359
+msgid "Live Preview"
+msgstr "ライブプレビュー"
+
+#: kashiwazaki-seo-dynamic-date.php:360
+msgid "Test your date formats and offsets in real-time."
+msgstr "日付形式とオフセットをリアルタイムでテストします。"
+
+#: kashiwazaki-seo-dynamic-date.php:364
+msgid "Format:"
+msgstr "フォーマット:"
+
+#: kashiwazaki-seo-dynamic-date.php:366
+msgid "PHP date format string"
+msgstr "PHPの日付フォーマット文字列"
+
+#: kashiwazaki-seo-dynamic-date.php:370
+msgid "Offset:"
+msgstr "オフセット:"
+
+#: kashiwazaki-seo-dynamic-date.php:372
+msgid "Optional: Relative date offset"
+msgstr "オプション: 相対的な日付オフセット"
+
+#: kashiwazaki-seo-dynamic-date.php:380
+msgid "Result:"
+msgstr "結果:"
+
+#: kashiwazaki-seo-dynamic-date.php:385
+msgid "Shortcode:"
+msgstr "ショートコード:"
+
+#: kashiwazaki-seo-dynamic-date.php:387
+msgid "Copy"
+msgstr "コピー"
+
+#: kashiwazaki-seo-dynamic-date.php:392
+msgid "Quick Formats"
+msgstr "クイックフォーマット"
+
+#: kashiwazaki-seo-dynamic-date.php:411
+msgid "Use the [ksdate] shortcode in your posts and pages to display dynamic dates."
+msgstr "投稿やページで [ksdate] ショートコードを使用して動的な日付を表示します。"
+
+#: kashiwazaki-seo-dynamic-date.php:414
+msgid "Basic Usage"
+msgstr "基本的な使い方"
+
+#: kashiwazaki-seo-dynamic-date.php:416
+msgid "Displays the current date in the default format."
+msgstr "デフォルトの形式で現在の日付を表示します。"
+
+#: kashiwazaki-seo-dynamic-date.php:420
+msgid "Custom Format"
+msgstr "カスタムフォーマット"
+
+#: kashiwazaki-seo-dynamic-date.php:423
+msgid "Specify a custom date format using PHP date format characters."
+msgstr "PHPの日付フォーマット文字を使用してカスタム形式を指定します。"
+
+#: kashiwazaki-seo-dynamic-date.php:427
+msgid "With Offset"
+msgstr "オフセット付き"
+
+#: kashiwazaki-seo-dynamic-date.php:428
+msgid "// 1 year ago"
+msgstr "// 1年前"
+
+#: kashiwazaki-seo-dynamic-date.php:429
+msgid "// 6 months ago"
+msgstr "// 6ヶ月前"
+
+#: kashiwazaki-seo-dynamic-date.php:430
+msgid "// 7 days later"
+msgstr "// 7日後"
+
+#: kashiwazaki-seo-dynamic-date.php:431
+msgid "// 2 weeks ago"
+msgstr "// 2週間前"
+
+#: kashiwazaki-seo-dynamic-date.php:483
+msgid "Date Difference (Past & Future)"
+msgstr "日付差分（過去と未来）"
+
+#: kashiwazaki-seo-dynamic-date.php:485
+msgid "Past Dates (How long since...)"
+msgstr "過去の日付（どれくらい経過したか...）"
+
+#: kashiwazaki-seo-dynamic-date.php:486
+msgid "// Years since 1999"
+msgstr "// 1999年からの年数"
+
+#: kashiwazaki-seo-dynamic-date.php:487
+msgid "// Years with unit"
+msgstr "// 年数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:488
+msgid "// Months since Jan 1999"
+msgstr "// 1999年1月からの月数"
+
+#: kashiwazaki-seo-dynamic-date.php:489
+msgid "// Months with unit"
+msgstr "// 月数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:490
+msgid "// Days since Jan 1, 1999"
+msgstr "// 1999年1月1日からの日数"
+
+#: kashiwazaki-seo-dynamic-date.php:491
+msgid "// Days with unit"
+msgstr "// 日数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:493
+msgid "Future Dates (How long until...)"
+msgstr "未来の日付（あとどれくらいか...）"
+
+#: kashiwazaki-seo-dynamic-date.php:494
+msgid "// Years until 2030"
+msgstr "// 2030年までの年数"
+
+#: kashiwazaki-seo-dynamic-date.php:495
+msgid "// Years until with unit"
+msgstr "// 年数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:496
+msgid "// Months until Dec 2025"
+msgstr "// 2025年12月までの月数"
+
+#: kashiwazaki-seo-dynamic-date.php:497
+msgid "// Months until with unit"
+msgstr "// 月数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:498
+msgid "// Days until Dec 31, 2025"
+msgstr "// 2025年12月31日までの日数"
+
+#: kashiwazaki-seo-dynamic-date.php:499
+msgid "// Days until with unit"
+msgstr "// 日数（単位付き）"
+
+#: kashiwazaki-seo-dynamic-date.php:502
+msgid "How it works:"
+msgstr "動作の仕組み:"
+
+#: kashiwazaki-seo-dynamic-date.php:503
+msgid "• Calculate the difference between a specified date and now"
+msgstr "• 指定された日付と現在の差を計算"
+
+#: kashiwazaki-seo-dynamic-date.php:504
+msgid "• Works for both past dates (elapsed time) and future dates (countdown)"
+msgstr "• 過去の日付（経過時間）と未来の日付（カウントダウン）の両方に対応"
+
+#: kashiwazaki-seo-dynamic-date.php:505
+msgid "• Always returns a positive number (absolute difference)"
+msgstr "• 常に正の数値を返す（絶対差分）"
+
+#: kashiwazaki-seo-dynamic-date.php:507
+msgid "Date format determines the unit:"
+msgstr "日付形式が単位を決定:"
+
+#: kashiwazaki-seo-dynamic-date.php:508
+msgid "• YYYY (e.g., \"1999\", \"2030\") → calculates years by default"
+msgstr "• YYYY（例:\"1999\", \"2030\"）→ デフォルトで年単位で計算"
+
+#: kashiwazaki-seo-dynamic-date.php:509
+msgid "• YYYY-MM (e.g., \"1999-01\", \"2025-12\") → calculates months by default"
+msgstr "• YYYY-MM（例:\"1999-01\", \"2025-12\"）→ デフォルトで月単位で計算"
+
+#: kashiwazaki-seo-dynamic-date.php:510
+msgid "• YYYY-MM-DD (e.g., \"1999-01-01\", \"2025-12-31\") → calculates days by default"
+msgstr "• YYYY-MM-DD（例:\"1999-01-01\", \"2025-12-31\"）→ デフォルトで日単位で計算"
+
+#: kashiwazaki-seo-dynamic-date.php:512
+msgid "Using format attribute:"
+msgstr "format属性の使用:"
+
+#: kashiwazaki-seo-dynamic-date.php:513
+msgid "• format=\"年\" → Override to years and add Japanese unit (e.g., \"26年\")"
+msgstr "• format=\"年\" → 年単位に上書きして日本語単位を追加（例:\"26年\"）"
+
+#: kashiwazaki-seo-dynamic-date.php:514
+msgid "• format=\"ヶ月\" → Override to months and add Japanese unit (e.g., \"313ヶ月\")"
+msgstr "• format=\"ヶ月\" → 月単位に上書きして日本語単位を追加（例:\"313ヶ月\"）"
+
+#: kashiwazaki-seo-dynamic-date.php:515
+msgid "• format=\"日\" → Override to days and add Japanese unit (e.g., \"9794日\")"
+msgstr "• format=\"日\" → 日単位に上書きして日本語単位を追加（例:\"9794日\"）"
+
+#: kashiwazaki-seo-dynamic-date.php:516
+msgid "• Without format → Returns just the number (e.g., \"26\")"
+msgstr "• format属性なし → 数値のみを返す（例:\"26\"）"
+
+#: kashiwazaki-seo-dynamic-date.php:518
+msgid "Important notes:"
+msgstr "重要な注意事項:"
+
+#: kashiwazaki-seo-dynamic-date.php:519
+msgid "• The shortcode only outputs the number. You need to add context words like \"から\" (since), \"まであと\" (until), etc."
+msgstr "• ショートコードは数値のみを出力します。\"から\"（since）、\"まであと\"（until）などの文脈を示す言葉は自分で追加する必要があります。"
+
+#: kashiwazaki-seo-dynamic-date.php:520
+msgid "• For past dates: \"1999年から[ksdate diff=\"1999\" format=\"年\"]が経過\""
+msgstr "• 過去の日付の場合: \"1999年から[ksdate diff=\"1999\" format=\"年\"]が経過\""
+
+#: kashiwazaki-seo-dynamic-date.php:521
+msgid "• For future dates: \"2030年まであと[ksdate diff=\"2030\" format=\"年\"]\""
+msgstr "• 未来の日付の場合: \"2030年まであと[ksdate diff=\"2030\" format=\"年\"]\""
+
+#: kashiwazaki-seo-dynamic-date.php:441
+msgid "Supported Offset Units"
+msgstr "サポートされているオフセット単位"
+
+#: kashiwazaki-seo-dynamic-date.php:439
+msgid "Unit"
+msgstr "単位"
+
+#: kashiwazaki-seo-dynamic-date.php:440
+msgid "Description"
+msgstr "説明"
+
+#: kashiwazaki-seo-dynamic-date.php:441
+msgid "Example"
+msgstr "例"
+
+#: kashiwazaki-seo-dynamic-date.php:447
+msgid "Years"
+msgstr "年"
+
+#: kashiwazaki-seo-dynamic-date.php:452
+msgid "Months"
+msgstr "月"
+
+#: kashiwazaki-seo-dynamic-date.php:457
+msgid "Weeks"
+msgstr "週"
+
+#: kashiwazaki-seo-dynamic-date.php:462
+msgid "Days"
+msgstr "日"
+
+#: kashiwazaki-seo-dynamic-date.php:470
+msgid "Common Date Format Characters"
+msgstr "よく使う日付フォーマット文字"
+
+#: kashiwazaki-seo-dynamic-date.php:474
+msgid "Character"
+msgstr "文字"
+
+#: kashiwazaki-seo-dynamic-date.php:498
+msgid "Practical Examples"
+msgstr "実用的な使用例"
+
+#: kashiwazaki-seo-dynamic-date.php:501
+msgid "SEO: Last Updated Date"
+msgstr "SEO: 最終更新日"
+
+#: kashiwazaki-seo-dynamic-date.php:503
+msgid "Output:"
+msgstr "出力:"
+
+#: kashiwazaki-seo-dynamic-date.php:507
+msgid "Copyright Notice"
+msgstr "コピーライト表記"
+
+#: kashiwazaki-seo-dynamic-date.php:513
+msgid "Statistical Data (Previous Year)"
+msgstr "統計データ (前年)"
+
+#: kashiwazaki-seo-dynamic-date.php:519
+msgid "Event Announcement (Future Date)"
+msgstr "イベント告知 (未来の日付)"
+
+#: kashiwazaki-seo-dynamic-date.php:525
+msgid "Article Freshness Indicator"
+msgstr "記事の鮮度インジケーター"
+
+#: kashiwazaki-seo-dynamic-date.php:531
+msgid "Multiple Dates in Comparison"
+msgstr "複数の日付の比較"
+
+#: kashiwazaki-seo-dynamic-date.php:603
+msgid "Years Since Foundation"
+msgstr "創業からの年数"
+
+#: kashiwazaki-seo-dynamic-date.php:609
+msgid "Months Since Launch"
+msgstr "サービス開始からの月数"
+
+#: kashiwazaki-seo-dynamic-date.php:625
+msgid "Days Since Opening"
+msgstr "開店からの日数"
+
+#: kashiwazaki-seo-dynamic-date.php:631
+msgid "Years Until Target"
+msgstr "目標年までの年数"
+
+#: kashiwazaki-seo-dynamic-date.php:637
+msgid "Days Until Event"
+msgstr "イベントまでの日数"
+
+#: kashiwazaki-seo-dynamic-date.php:643
+msgid "Countdown to Anniversary"
+msgstr "記念日までのカウントダウン"
+
+#: kashiwazaki-seo-dynamic-date.php:649
+msgid "SEO Best Practices"
+msgstr "SEOのベストプラクティス"
+
+#: kashiwazaki-seo-dynamic-date.php:539
+msgid "Use for \"last updated\" dates to show content freshness"
+msgstr "コンテンツの鮮度を示すために「最終更新日」に使用する"
+
+#: kashiwazaki-seo-dynamic-date.php:540
+msgid "Display current year in copyright notices"
+msgstr "コピーライト表記に現在の年を表示する"
+
+#: kashiwazaki-seo-dynamic-date.php:541
+msgid "Show relative dates for statistics and data"
+msgstr "統計データに相対的な日付を表示する"
+
+#: kashiwazaki-seo-dynamic-date.php:542
+msgid "Create evergreen content with automatically updating dates"
+msgstr "自動更新される日付でエバーグリーンコンテンツを作成する"
+
+#: kashiwazaki-seo-dynamic-date.php:543
+msgid "Improve CTR by showing recent dates in meta descriptions"
+msgstr "メタディスクリプションに最新の日付を表示してCTRを向上させる"

@@ -1,0 +1,292 @@
+/**
+ * Kashiwazaki SEO Dynamic Date - Admin Styles
+ * Version: 1.0.0
+ */
+
+/* Main Container */
+.ksdate-admin-wrap {
+    margin: 20px 20px 0 0;
+}
+
+.ksdate-admin-wrap h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Tab Content */
+.ksdate-tab-content {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Settings Section */
+.ksdate-settings-section {
+    margin-bottom: 40px;
+}
+
+.ksdate-settings-section h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Preset Rows */
+.ksdate-preset-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.ksdate-preset-row input[type="text"] {
+    flex: 0 0 200px;
+}
+
+.ksdate-preset-row .ksdate-preset-preview {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background: #e8f5e9;
+    border-radius: 3px;
+    font-weight: 500;
+    color: #2e7d32;
+}
+
+.ksdate-remove-preset {
+    background: #dc3232;
+    color: #fff;
+    border-color: #dc3232;
+}
+
+.ksdate-remove-preset:hover {
+    background: #c62828;
+    border-color: #c62828;
+    color: #fff;
+}
+
+#ksdate-add-preset {
+    margin-top: 10px;
+}
+
+/* Preview Section */
+.ksdate-preview-section {
+    max-width: 900px;
+}
+
+.ksdate-preview-form {
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.ksdate-form-group {
+    margin-bottom: 20px;
+}
+
+.ksdate-form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.ksdate-form-group input[type="text"] {
+    width: 100%;
+    max-width: 500px;
+}
+
+.ksdate-form-group .description {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #666;
+}
+
+#ksdate-preview-button {
+    margin-top: 10px;
+}
+
+#ksdate-preview-result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff;
+    border: 2px solid #2271b1;
+    border-radius: 8px;
+}
+
+#ksdate-preview-result h3 {
+    margin-top: 0;
+    color: #2271b1;
+}
+
+.ksdate-preview-output {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d2327;
+    padding: 20px;
+    background: #f0f6fc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#ksdate-preview-shortcode {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+}
+
+#ksdate-preview-shortcode h3 {
+    margin-top: 0;
+    color: #856404;
+}
+
+.ksdate-shortcode-output {
+    width: 100%;
+    max-width: 500px;
+    font-family: monospace;
+    background: #fff;
+}
+
+.ksdate-copy-shortcode {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Quick Formats */
+.ksdate-quick-formats {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.ksdate-quick-formats h3 {
+    margin-top: 0;
+}
+
+.ksdate-format-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ksdate-quick-format {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    background: #f0f0f1;
+    border-color: #2271b1;
+    color: #2271b1;
+    transition: all 0.2s;
+}
+
+.ksdate-quick-format:hover {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+/* Usage Section */
+.ksdate-usage-section .card,
+.ksdate-examples-section .card {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.ksdate-usage-section pre,
+.ksdate-examples-section pre {
+    background: #f7f7f7;
+    padding: 15px;
+    border-left: 4px solid #2271b1;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.ksdate-usage-section table,
+.ksdate-examples-section table {
+    margin-top: 15px;
+}
+
+.ksdate-usage-section table th {
+    background: #f0f0f1;
+    font-weight: 600;
+}
+
+.ksdate-usage-section table code {
+    background: #f7f7f7;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+/* Examples Section */
+.ksdate-example-output {
+    padding: 15px;
+    background: #e8f5e9;
+    border-left: 4px solid #4caf50;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.ksdate-examples-section ul {
+    list-style-type: disc;
+    padding-left: 30px;
+}
+
+.ksdate-examples-section ul li {
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .ksdate-preset-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ksdate-preset-row input[type="text"] {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .ksdate-format-buttons {
+        flex-direction: column;
+    }
+
+    .ksdate-quick-format {
+        width: 100%;
+    }
+}
+
+/* Loading State */
+.ksdate-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Success Message */
+.ksdate-success {
+    padding: 10px 15px;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+    margin: 15px 0;
+}
+
+/* Error Message */
+.ksdate-error {
+    padding: 10px 15px;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+    margin: 15px 0;
+}

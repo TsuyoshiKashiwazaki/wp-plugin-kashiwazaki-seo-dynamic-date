@@ -1,0 +1,131 @@
+# Copyright (C) 2025 柏崎剛 (Tsuyoshi Kashiwazaki)
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kashiwazaki SEO Dynamic Date 1.0.0\n"
+"Report-Msgid-Bugs-To: https://www.tsuyoshikashiwazaki.jp\n"
+"POT-Creation-Date: 2025-10-24 16:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#. Plugin Name of the plugin
+msgid "Kashiwazaki SEO Dynamic Date"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.tsuyoshikashiwazaki.jp"
+msgstr ""
+
+#. Description of the plugin
+msgid "投稿や固定ページに動的な日付を表示するショートコードを提供し、コンテンツを常に最新の状態に保つことでSEO効果を向上させます"
+msgstr ""
+
+#. Author of the plugin
+msgid "柏崎剛 (Tsuyoshi Kashiwazaki)"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.tsuyoshikashiwazaki.jp"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:108
+msgid "Kashiwazaki SEO Dynamic Date"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:109
+msgid "KS Dynamic Date"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:123
+msgid "How to Use"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:124
+msgid "Use the [ksdate] shortcode in your posts and pages to display dynamic dates."
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:126
+msgid "Basic Usage"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:128
+msgid "Displays the current date in the default format (Y年m月d日)."
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:130
+msgid "Custom Format"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:134
+msgid "With Offset"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:135
+msgid "// 1 year ago"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:136
+msgid "// 6 months ago"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:137
+msgid "// 7 days later"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:138
+msgid "// 2 weeks ago"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:140
+msgid "Examples"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:147
+msgid "Supported Offset Units"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:149
+msgid "Years"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:150
+msgid "Months"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:151
+msgid "Weeks"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:152
+msgid "Days"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:157
+msgid "SEO Best Practices"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:158
+msgid "Using dynamic dates can help keep your content fresh and relevant for search engines. Here are some tips:"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:160
+msgid "Use for \"last updated\" dates to show content freshness"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:161
+msgid "Display current year in copyright notices"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:162
+msgid "Show relative dates for statistics and data"
+msgstr ""
+
+#: kashiwazaki-seo-dynamic-date.php:163
+msgid "Create evergreen content with automatically updating dates"
+msgstr ""
