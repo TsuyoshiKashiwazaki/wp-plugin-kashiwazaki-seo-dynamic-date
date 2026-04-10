@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ショートコードの使い方 - Kashiwazaki SEO Dynamic Date マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">Dynamic Date</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="shortcode-usage.html">ショートコードの使い方</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>ショートコードの使い方</h1>
+
+        <p class="lead"><code>[ksdate]</code> ショートコードの属性・オフセット・日付差計算について詳しく解説します。</p>
+
+        <h2>基本構文</h2>
+        <pre><code>[ksdate]</code></pre>
+        <p>属性を指定しない場合、管理画面で設定したデフォルトフォーマット（初期値: <code>Y年m月d日</code>）で今日の日付が表示されます。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/02-dynamic-date-detail.png" alt="日付ショートコードの設定" class="lightbox-trigger">
+            <figcaption>動的日付ショートコードの設定画面</figcaption>
+        </figure>
+
+        <h3>フロントエンド表示例</h3>
+        <figure class="screenshot">
+            <img src="images/screenshots/03-frontend-dynamicdate.png" alt="動的日付の表示例" class="lightbox-trigger">
+            <figcaption>ショートコードで出力された動的な日付テキスト</figcaption>
+        </figure>
+
+        <h2>属性一覧</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">属性</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>format</td>
+                    <td>PHPの日付フォーマット文字列。省略時はデフォルトフォーマットを使用。例: <code>Y年m月d日</code>, <code>Y/m/d</code></td>
+                </tr>
+                <tr>
+                    <td>offset</td>
+                    <td>今日の日付からのオフセット。<code>+3d</code>（3日後）、<code>-1m</code>（1ヶ月前）など。省略時はオフセットなし</td>
+                </tr>
+                <tr>
+                    <td>diff</td>
+                    <td>指定した日付から今日までの差分を計算。<code>2020</code>（年差）、<code>2020-01</code>（月差）、<code>2020-01-15</code>（日差）の形式に対応</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-note">
+            <p><code>diff</code> 属性と <code>offset</code> 属性を同時に指定した場合、<code>diff</code> が優先されます。</p>
+        </div>
+
+        <h2>日付フォーマット（format属性）</h2>
+        <p><code>format</code> 属性にはPHPの <code>date()</code> 関数と同じフォーマット文字列を使用します。内部的には <code>wp_date()</code> を使用しているため、WordPressのタイムゾーン設定が反映されます。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">記述例</th>
+                    <th>出力例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[ksdate]</td>
+                    <td>2026年04月01日（デフォルト）</td>
+                </tr>
+                <tr>
+                    <td>[ksdate format="Y/m/d"]</td>
+                    <td>2026/04/01</td>
+                </tr>
+                <tr>
+                    <td>[ksdate format="Y-m-d"]</td>
+                    <td>2026-04-01</td>
+                </tr>
+                <tr>
+                    <td>[ksdate format="Y年m月"]</td>
+                    <td>2026年04月</td>
+                </tr>
+                <tr>
+                    <td>[ksdate format="Y"]</td>
+                    <td>2026</td>
+                </tr>
+                <tr>
+                    <td>[ksdate format="n月j日"]</td>
+                    <td>4月1日</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>オフセット計算（offset属性）</h2>
+        <p><code>offset</code> 属性を使うと、今日の日付に対して加算・減算した日付を表示できます。フォーマットは <code>[+-]数値[ymwd]</code> です。</p>
+
+        <h3>オフセット単位</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">記号</th>
+                    <th>単位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>y</td>
+                    <td>年（years）</td>
+                </tr>
+                <tr>
+                    <td>m</td>
+                    <td>月（months）</td>
+                </tr>
+                <tr>
+                    <td>w</td>
+                    <td>週（weeks）</td>
+                </tr>
+                <tr>
+                    <td>d</td>
+                    <td>日（days）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>オフセットの使用例</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">記述例</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[ksdate offset="+3d"]</td>
+                    <td>3日後の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="-7d"]</td>
+                    <td>7日前（1週間前）の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="+1m"]</td>
+                    <td>1ヶ月後の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="-1m"]</td>
+                    <td>先月の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="+2w"]</td>
+                    <td>2週間後の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="+1y"]</td>
+                    <td>1年後の日付</td>
+                </tr>
+                <tr>
+                    <td>[ksdate offset="-1y" format="Y"]</td>
+                    <td>去年の年号（例: 2025）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+            <p>「この記事は <code>[ksdate]</code> 時点の情報です」「キャンペーン期間: <code>[ksdate]</code> 〜 <code>[ksdate offset="+30d"]</code>」のように活用できます。</p>
+        </div>
+
+        <h2>日付差計算（diff属性）</h2>
+        <p><code>diff</code> 属性を使うと、指定した日付から今日までの差分を自動算出して表示します。経過年数・経過月数・経過日数の表示に活用できます。</p>
+
+        <h3>diff属性のフォーマット</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">入力形式</th>
+                    <th>デフォルト計算単位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>YYYY（例: 2020）</td>
+                    <td>年差（years）</td>
+                </tr>
+                <tr>
+                    <td>YYYY-MM（例: 2020-01）</td>
+                    <td>月差（months）</td>
+                </tr>
+                <tr>
+                    <td>YYYY-MM-DD（例: 2020-01-15）</td>
+                    <td>日差（days）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>format属性による単位の上書き</h3>
+        <p><code>diff</code> 属性と <code>format</code> 属性を組み合わせると、出力に単位テキストを付与したり、計算単位を変更したりできます。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">format内の文字</th>
+                    <th>効果</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>「年」を含む</td>
+                    <td>年単位で計算し「年」を付与（例: 6年）</td>
+                </tr>
+                <tr>
+                    <td>「月」または「ヶ月」を含む</td>
+                    <td>月単位で計算し「ヶ月」を付与（例: 72ヶ月）</td>
+                </tr>
+                <tr>
+                    <td>「日」を含む</td>
+                    <td>日単位で計算し「日」を付与（例: 2192日）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>日付差の使用例</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">記述例</th>
+                    <th>説明・出力例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[ksdate diff="2020"]</td>
+                    <td>2020年からの経過年数（例: 6）</td>
+                </tr>
+                <tr>
+                    <td>[ksdate diff="2020" format="年"]</td>
+                    <td>2020年からの経過年数＋単位（例: 6年）</td>
+                </tr>
+                <tr>
+                    <td>[ksdate diff="2020-01" format="ヶ月"]</td>
+                    <td>2020年1月からの経過月数（例: 75ヶ月）</td>
+                </tr>
+                <tr>
+                    <td>[ksdate diff="2024-01-01" format="日"]</td>
+                    <td>2024年1月1日からの経過日数（例: 821日）</td>
+                </tr>
+                <tr>
+                    <td>[ksdate diff="2030"]</td>
+                    <td>未来の日付の場合も差分を計算（例: 4）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+            <p>「創業 <code>[ksdate diff="1999" format="年"]</code> 目」「サービス開始から <code>[ksdate diff="2020-04" format="ヶ月"]</code>」のように、経過期間の自動表示に活用できます。</p>
+        </div>
+
+        <h2>実践的な使用例</h2>
+
+        <h3>記事の更新日表示</h3>
+        <pre><code>この記事は [ksdate format="Y年n月j日"] に最終確認しています。</code></pre>
+        <p>出力例: この記事は 2026年4月1日 に最終確認しています。</p>
+
+        <h3>キャンペーン期間の自動更新</h3>
+        <pre><code>期間: [ksdate] 〜 [ksdate offset="+14d"]</code></pre>
+        <p>常に「今日から14日後まで」の期間が表示されます。</p>
+
+        <h3>会社の創業年数</h3>
+        <pre><code>創業 [ksdate diff="2005" format="年"] の実績</code></pre>
+        <p>出力例: 創業 21年 の実績</p>
+
+        <h3>年齢・経過年数の表示</h3>
+        <pre><code>開業から [ksdate diff="2018-06" format="ヶ月"] が経過しました。</code></pre>
+        <p>出力例: 開業から 94ヶ月 が経過しました。</p>
+
+        <div class="callout callout-warning">
+            <p>ショートコードはHTMLソースにそのまま出力されるため、日付の値はページ表示のたびにサーバーサイドで計算されます。キャッシュプラグインを使用している場合は、キャッシュの有効期限に注意してください。</p>
+        </div>
+
+        <nav class="page-nav">
+            <a href="setup.html" class="prev">&laquo; インストール・初期設定</a>
+            <a href="troubleshooting.html" class="next">トラブルシューティング &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO Dynamic Date v1.0.0</p>
+        </footer>
+    </main>
+    <div class="lightbox"></div>
+    <script src="js/manual.js?v=1"></script>
+</body>
+</html>

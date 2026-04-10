@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インストール・初期設定 - Kashiwazaki SEO Dynamic Date マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">Dynamic Date</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="shortcode-usage.html">ショートコードの使い方</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>インストール・初期設定</h1>
+
+        <p class="lead">プラグインのインストールから初期設定まで、ステップバイステップで解説します。</p>
+
+        <h2>インストール手順</h2>
+        <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-body">
+                <p>WordPress管理画面の「プラグイン」→「新規追加」→「プラグインのアップロード」からZIPファイルをアップロードします。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-body">
+                <p>アップロード完了後、「プラグインを有効化」をクリックします。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-body">
+                <p>有効化すると、WordPress管理画面の左メニューに「Kashiwazaki SEO Dynamic Date」が表示されます。</p>
+            </div>
+        </div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/00-menu-location.png" alt="管理画面メニューの位置" class="lightbox-trigger">
+            <figcaption>管理画面の左メニューにプラグインが追加されます</figcaption>
+        </figure>
+
+        <div class="callout callout-tip">
+            <p>管理画面は「Settings」「Preview」「How to Use」「Examples」の4タブ構成です。</p>
+        </div>
+
+        <h2>管理画面の構成</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">タブ</th>
+                    <th>内容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Settings</td>
+                    <td>デフォルトの日付フォーマットを設定</td>
+                </tr>
+                <tr>
+                    <td>Preview</td>
+                    <td>フォーマットとオフセットを指定して日付出力をリアルタイムプレビュー（AJAX）</td>
+                </tr>
+                <tr>
+                    <td>How to Use</td>
+                    <td>ショートコードの基本的な使い方を確認</td>
+                </tr>
+                <tr>
+                    <td>Examples</td>
+                    <td>よく使うショートコードのサンプル集</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>デフォルトフォーマットの設定</h2>
+        <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-body">
+                <p>管理画面の「Settings」タブを開きます。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-body">
+                <p>「Default Date Format」欄にPHPの日付フォーマット文字列を入力します。デフォルトは <code>Y年m月d日</code> です。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-body">
+                <p>現在の出力プレビューが表示されるので、意図した形式になっているか確認します。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-body">
+                <p>「変更を保存」ボタンをクリックして設定を保存します。</p>
+            </div>
+        </div>
+
+        <div class="callout callout-note">
+            <p>ここで設定したフォーマットは、ショートコードで <code>format</code> 属性を省略した場合のデフォルト値として使用されます。ショートコード側で <code>format</code> を指定すれば、個別に上書きできます。</p>
+        </div>
+
+        <h2>よく使うフォーマット例</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">フォーマット</th>
+                    <th>出力例</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Y年m月d日</td>
+                    <td>2026年04月01日</td>
+                </tr>
+                <tr>
+                    <td>Y/m/d</td>
+                    <td>2026/04/01</td>
+                </tr>
+                <tr>
+                    <td>Y-m-d</td>
+                    <td>2026-04-01</td>
+                </tr>
+                <tr>
+                    <td>Y年m月</td>
+                    <td>2026年04月</td>
+                </tr>
+                <tr>
+                    <td>Y</td>
+                    <td>2026</td>
+                </tr>
+                <tr>
+                    <td>n月j日</td>
+                    <td>4月1日</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>プレビュー機能の使い方</h2>
+        <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-body">
+                <p>「Preview」タブを開きます。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-body">
+                <p>「Format」欄に日付フォーマット、「Offset」欄にオフセット値（例: <code>+3d</code>）を入力します。</p>
+            </div>
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-body">
+                <p>プレビューボタンをクリックすると、AJAXで結果がリアルタイム表示されます。</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip">
+            <p>プレビュー機能を使えば、ショートコードを記事に挿入する前に出力結果を確認できます。</p>
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html" class="prev">&laquo; 概要</a>
+            <a href="shortcode-usage.html" class="next">ショートコードの使い方 &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO Dynamic Date v1.0.0</p>
+        </footer>
+    </main>
+    <div class="lightbox"></div>
+    <script src="js/manual.js?v=1"></script>
+</body>
+</html>

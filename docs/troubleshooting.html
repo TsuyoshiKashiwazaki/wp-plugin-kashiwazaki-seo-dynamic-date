@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トラブルシューティング - Kashiwazaki SEO Dynamic Date マニュアル</title>
+    <link rel="stylesheet" href="css/style.css?v=1">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">Dynamic Date</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="shortcode-usage.html">ショートコードの使い方</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+    <main class="content">
+        <h1>トラブルシューティング</h1>
+        <p class="lead">よくある問題とその解決方法をまとめています。</p>
+
+        <h2>ショートコードがそのまま表示される</h2>
+        <p><strong>原因:</strong> プラグインが無効化されている、またはショートコード名が間違っている</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p>WordPress管理画面の「プラグイン」ページで「Kashiwazaki SEO Dynamic Date」が有効になっているか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p>ショートコード名が <code>[ksdate]</code> であることを確認する（大文字・スペースに注意）</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p>ブロックエディターの場合、「ショートコード」ブロックまたは「カスタムHTML」ブロックに記述しているか確認する</p>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-tip">
+            <p>クラシックエディターでは本文に直接 <code>[ksdate]</code> と記述するだけで動作します。</p>
+        </div>
+
+        <h2>日付が表示されない（空白になる）</h2>
+        <p><strong>原因:</strong> 無効なフォーマットやオフセット値を指定している</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p><code>format</code> 属性にPHPの日付フォーマットとして有効な文字列を指定しているか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p><code>offset</code> 属性が <code>[+-]数値[ymwd]</code> の形式になっているか確認する（例: <code>+3d</code>, <code>-1m</code>）</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p><code>diff</code> 属性が <code>YYYY</code>, <code>YYYY-MM</code>, <code>YYYY-MM-DD</code> のいずれかの形式になっているか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                <div class="step-body">
+                    <p>管理画面の「Preview」タブで同じパラメータを試して正常に出力されるか確認する</p>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-note">
+            <p>エラーが発生した場合、本プラグインはユーザーにエラーメッセージを表示せず空文字を返します。これはフロントエンドの表示を崩さないための仕様です。</p>
+        </div>
+
+        <h2>日付が更新されない（キャッシュの問題）</h2>
+        <p><strong>原因:</strong> ページキャッシュやCDNキャッシュにより古い日付が表示されている</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p>使用しているキャッシュプラグイン（WP Super Cache、W3 Total Cache等）のキャッシュをクリアする</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p>CDN（Cloudflare等）を使用している場合はCDNのキャッシュもパージする</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p>キャッシュの有効期限を動的日付の更新頻度に合わせて調整する（例: 日付単位の表示なら24時間以内に設定）</p>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-warning">
+            <p>ショートコードの日付はサーバーサイドでページ表示時に計算されます。ページ全体がキャッシュされている場合、キャッシュの有効期限まで日付は更新されません。</p>
+        </div>
+
+        <h2>タイムゾーンがずれている</h2>
+        <p><strong>原因:</strong> WordPressのタイムゾーン設定が正しくない</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p>WordPress管理画面の「設定」→「一般」を開く</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p>「タイムゾーン」が正しく設定されているか確認する（日本の場合は <code>Asia/Tokyo</code> または <code>UTC+9</code>）</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p>設定を保存し、ショートコードの出力を再確認する</p>
+                </div>
+            </div>
+        </div>
+        <div class="callout callout-note">
+            <p>本プラグインは <code>wp_date()</code> および <code>wp_timezone()</code> を使用しており、WordPressのタイムゾーン設定に従います。</p>
+        </div>
+
+        <h2>管理画面が表示されない</h2>
+        <p><strong>原因:</strong> 権限不足またはプラグインの競合</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p>管理者（Administrator）権限でログインしているか確認する（<code>manage_options</code> 権限が必要）</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p>他のプラグインを一時的に無効化し、競合がないか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p>テーマをデフォルトテーマに切り替えて動作するか確認する</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>プレビュー（AJAX）が動作しない</h2>
+        <p><strong>原因:</strong> JavaScriptエラーまたはAJAXの問題</p>
+        <div class="steps">
+            <div class="step">
+                <span class="step-number">1</span>
+                <div class="step-body">
+                    <p>ブラウザの開発者ツール（F12）を開き、コンソールにエラーが表示されていないか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                <div class="step-body">
+                    <p>jQueryが正しく読み込まれているか確認する</p>
+                </div>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                <div class="step-body">
+                    <p>他のプラグインやテーマがJavaScriptエラーを発生させていないか確認する</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>動作要件</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:35%;">項目</th>
+                    <th>要件</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>WordPress</td>
+                    <td>5.8以上</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>7.4以上</td>
+                </tr>
+                <tr>
+                    <td>対応ブラウザ</td>
+                    <td>モダンブラウザ（管理画面のみ）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>技術仕様</h2>
+        <ul>
+            <li><strong>データ保存:</strong> wp_options (ksdate_settings)</li>
+            <li><strong>カスタムテーブル:</strong> なし</li>
+            <li><strong>外部通信:</strong> なし</li>
+            <li><strong>Cron:</strong> なし</li>
+            <li><strong>メール:</strong> なし</li>
+            <li><strong>セキュリティ:</strong> nonce検証、manage_options権限チェック</li>
+        </ul>
+
+        <figure class="infographic">
+            <img src="images/infographics/architecture.png" alt="プラグインのアーキテクチャ">
+            <figcaption>プラグインのアーキテクチャ</figcaption>
+        </figure>
+
+        <nav class="page-nav">
+            <a href="shortcode-usage.html" class="prev">&laquo; ショートコードの使い方</a>
+            <span></span>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO Dynamic Date v1.0.0</p>
+        </footer>
+    </main>
+    <div class="lightbox"></div>
+    <script src="js/manual.js?v=1"></script>
+</body>
+</html>
